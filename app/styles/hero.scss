@@ -1,0 +1,33 @@
+.hero {
+  width: 1000px;
+  height: 650px;
+  margin: 50px auto 150px;
+  background-image: url('../hero.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__title {
+    padding-top: 75px;
+    font-size: 62px;
+    font-weight: bold;
+    color: $grey;
+    line-height: 75px;
+  }
+
+  &__text {
+    max-width: 650px;
+    font-size: 30px;
+    color: $grey;
+    line-height: 41px;
+  }
+
+  &__button {
+    display: inline-block;
+    margin-top: 50px;
+    background: $blue;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px 0 rgba(176, 176, 176, 0.5);
+    color: white;
+    padding: 15px 20px;
+  }
+}

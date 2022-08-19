@@ -1,7 +1,7 @@
 .sub-nav-wrapper {
   position: relative;
   z-index: 100;
-  background-color: #F0F4FB;
+  background-color: #f0f4fb;
 }
 
 .sub-nav {
@@ -21,7 +21,8 @@
       font-weight: bold;
     }
 
-    &.active, &:hover {
+    &.active,
+    &:hover {
       color: $blue;
     }
   }

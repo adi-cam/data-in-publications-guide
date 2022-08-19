@@ -4,25 +4,24 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
-  src: local(''),
-  url('../fonts/ubuntu-regular.woff2') format('woff2'),
-  url('../fonts/ubuntu-regular.woff') format('woff');
+  src: local(''), url('../fonts/ubuntu-regular.woff2') format('woff2'),
+    url('../fonts/ubuntu-regular.woff') format('woff');
 }
 @font-face {
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: bold;
-  src: local(''),
-  url('../fonts/ubuntu-bold.woff2') format('woff2'),
-  url('../fonts/ubuntu-bold.woff') format('woff');
+  src: local(''), url('../fonts/ubuntu-bold.woff2') format('woff2'), url('../fonts/ubuntu-bold.woff') format('woff');
 }
 
-$blue: #062FC5;
+$blue: #062fc5;
 $dark-blue: #00326c;
 $dark-grey: #757575;
+$grey: #404040;
 $light-grey: #c2c2c2;
 $black: #1a1a1a;
 
+@import 'hero';
 @import 'nav';
 @import 'page';
 @import 'sub-nav';

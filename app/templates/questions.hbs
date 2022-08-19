@@ -40,7 +40,7 @@
               {{#if (eq question.format "multiple")}}
                 <div
                   role="checkbox"
-                  class="checkbox {{if (get this.answers option.id) "checked"}}"
+                  class="checkbox {{if (get this.answers option.id) 'checked'}}"
                   aria-checked={{get this.answers option.id}}
                   {{on "click" (fn this.toggleAnswer question.id option.id (not (get this.answers option.id)))}}
                 >
@@ -49,7 +49,7 @@
               {{else if (eq question.format "single")}}
                 <div
                   role="radio"
-                  class="radio {{if (eq (get this.answers question.id) option.id) "checked"}}"
+                  class="radio {{if (eq (get this.answers question.id) option.id) 'checked'}}"
                   aria-checked={{eq (get this.answers question.id) option.id}}
                   {{on "click" (fn this.setAnswer question.id option.id)}}
                 >
