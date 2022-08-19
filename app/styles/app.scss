@@ -17,7 +17,7 @@
   url('../fonts/ubuntu-bold.woff') format('woff');
 }
 
-$blue: #004494;
+$blue: #062FC5;
 $dark-blue: #00326c;
 $dark-grey: #757575;
 $light-grey: #c2c2c2;
@@ -29,4 +29,10 @@ $black: #1a1a1a;
 body {
   font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
   font-size: 16px;
+  color: $black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }

@@ -17,6 +17,16 @@
     {{/if}}
   </h2>
 
+  <div class="icon-button" role="button" {{on "click" this.print}}>
+    <Icons::Print />
+    <span>Print Page</span>
+  </div>
+
+  <div class="icon-button" role="button" {{on "click" this.share}}>
+    <Icons::Link />
+    <span>Share Page</span>
+  </div>
+
   {{#each-in this.filteredGroupedRecommendations as |topic recommendations|}}
     <div class="section">
       <h2

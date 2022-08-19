@@ -1,45 +1,23 @@
 {{page-title "Publication Wizard"}}
 
 <nav class="nav">
-  <ul>
-    <li>
-      <LinkTo @route="index" class="title">
-        Publication Wizard
-      </LinkTo>
-    </li>
+  <div>
+    <LinkTo class="nav__item" @route="questions">
+      Questions
+    </LinkTo>
 
-    <li>
-      <LinkTo @route="questions">
-        Questions
-      </LinkTo>
-    </li>
+    <LinkTo class="nav__item" @route="recommendations">
+      Recommendations
+    </LinkTo>
 
-    <li>
-      <LinkTo @route="recommendations">
-        Recommendations
-      </LinkTo>
-    </li>
+    <LinkTo class="nav__item" @route="catalog">
+      Catalogue
+    </LinkTo>
+  </div>
 
-    <li>
-      <LinkTo @route="catalog">
-        Catalogue
-      </LinkTo>
-    </li>
-
-    <li>
-      <div class="icon-button" role="button" {{on "click" this.print}}>
-        <Icons::Print />
-        <span>Print Page</span>
-      </div>
-    </li>
-
-    <li>
-      <div class="icon-button" role="button" {{on "click" this.share}}>
-        <Icons::Link />
-        <span>Share Page</span>
-      </div>
-    </li>
-  </ul>
+  <LinkTo class="nav__item nav__item--title" @route="index" class="title">
+    Publication Wizard
+  </LinkTo>
 </nav>
 
 {{outlet}}
