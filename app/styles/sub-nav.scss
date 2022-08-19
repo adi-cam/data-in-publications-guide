@@ -1,11 +1,10 @@
-.nav-wrapper {
+.sub-nav-wrapper {
   position: relative;
-  z-index: 1000;
-  padding: 0 50px;
-  box-shadow: 0 2px 14px 0 rgba(205,205,205,0.50);
+  z-index: 100;
+  background-color: #F0F4FB;
 }
 
-.nav {
+.sub-nav {
   display: flex;
   max-width: 1000px;
   min-width: 650px;
@@ -17,12 +16,6 @@
   &__item {
     display: inline-block;
     padding: 22px 0;
-    margin-left: 50px;
-    border-bottom: 1.5px solid white;
-
-    &:first-child {
-      margin-left: 0;
-    }
 
     &--title {
       font-weight: bold;
@@ -30,7 +23,11 @@
 
     &.active, &:hover {
       color: $blue;
-      border-color: $blue;
     }
+  }
+
+  svg polyline {
+    fill: none;
+    stroke: $black;
   }
 }
