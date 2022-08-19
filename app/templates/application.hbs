@@ -1,23 +1,25 @@
 {{page-title "Publication Wizard"}}
 
-<nav class="nav">
-  <div>
-    <LinkTo class="nav__item" @route="questions">
-      Questions
-    </LinkTo>
+<div class="nav-wrapper">
+  <nav class="nav">
+    <div>
+      <LinkTo class="nav__item" @route="questions">
+        Questions
+      </LinkTo>
 
-    <LinkTo class="nav__item" @route="recommendations">
-      Recommendations
-    </LinkTo>
+      <LinkTo class="nav__item" @route="recommendations">
+        Recommendations
+      </LinkTo>
 
-    <LinkTo class="nav__item" @route="catalog">
-      Catalogue
-    </LinkTo>
-  </div>
+      <LinkTo class="nav__item" @route="catalog">
+        Catalogue
+      </LinkTo>
+    </div>
 
-  <LinkTo class="nav__item nav__item--title" @route="index" class="title">
-    Publication Wizard
-  </LinkTo>
-</nav>
+    <LinkTo class="nav__item nav__item--title" @route="index" class="title">
+      Publication Wizard
+    </LinkTo>
+  </nav>
+</div>
 
 {{outlet}}
