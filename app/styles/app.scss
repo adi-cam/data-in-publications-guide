@@ -1,5 +1,22 @@
 @import 'normalize';
 
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('../fonts/ubuntu-regular.woff2') format('woff2'),
+  url('../fonts/ubuntu-regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: bold;
+  src: local(''),
+  url('../fonts/ubuntu-bold.woff2') format('woff2'),
+  url('../fonts/ubuntu-bold.woff') format('woff');
+}
+
 $blue: #004494;
 $dark-blue: #00326c;
 $dark-grey: #757575;
@@ -10,6 +27,6 @@ $black: #1a1a1a;
 @import 'page';
 
 body {
-  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Ubuntu', 'Helvetica', 'Arial', sans-serif;
   font-size: 16px;
 }
