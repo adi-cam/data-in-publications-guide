@@ -86,7 +86,7 @@ export default class extends Controller {
   }
 
   get filteredTopics() {
-    return Object.keys(this.filteredGroupedQuestions);
+    return Object.keys(this.filteredGroupedRecommendations);
   }
 
   @action print() {
