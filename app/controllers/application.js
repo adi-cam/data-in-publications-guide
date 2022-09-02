@@ -9,14 +9,6 @@ export default class extends Controller {
   @tracked title = '';
   @tracked answers = {};
 
-  @action print() {
-    window.print();
-  }
-
-  @action share() {
-    window.location = `mailto:xyz@abc.com?subject=EU%20Publication%20Wizard&body=Visit%20here:%20${window.location}`;
-  }
-
   get answerData() {
     return Object.fromEntries(
       Object.keys(this.answers).map((key) => {
