@@ -3,67 +3,6 @@
   margin: 100px auto;
   padding: 0 50px 100px;
 
-  .title1 {
-    font-size: 48px;
-    font-weight: normal;
-    line-height: 60px;
-    color: $black;
-  }
-
-  .title2 {
-    font-size: 30px;
-    font-weight: normal;
-    line-height: 40px;
-    color: $black;
-  }
-
-  .title3 {
-    font-size: 26px;
-    font-weight: normal;
-    line-height: 40px;
-    color: $black;
-  }
-
-  .title4 {
-    margin: 35px 0 10px;
-    font-size: 14px;
-    color: $dark-grey;
-    line-height: 20px;
-  }
-
-  .title0,
-  .title1,
-  .title2,
-  .title3,
-  .title4 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    svg {
-      margin-left: 20px;
-
-      polyline {
-        fill: none;
-        stroke: $black;
-      }
-    }
-
-    &__capped {
-      margin: 0;
-    }
-
-    &__button {
-      cursor: pointer;
-    }
-
-    &__small {
-      font-size: 14px;
-      font-weight: bold;
-      color: $blue;
-    }
-  }
-
   .statement {
     margin-top: 115px;
   }
@@ -196,30 +135,5 @@
     display: flex;
     margin-top: 100px;
     justify-content: space-between;
-  }
-
-  .sidebar {
-    padding: 0 0;
-    list-style: none;
-    line-height: 37px;
-    margin-bottom: 50px;
-
-    @media all and (min-width: 1075px) {
-      position: sticky;
-      height: 0;
-      top: 25px;
-      width: 200px;
-      margin: 25px 0 0 -200px;
-    }
-
-    a {
-      font-weight: bold;
-      color: $black;
-      text-decoration: none;
-
-      &.active {
-        color: $blue;
-      }
-    }
   }
 }
