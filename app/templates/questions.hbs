@@ -15,28 +15,43 @@
 </div>
 
 {{#if (eq this.page "rec")}}
-  <div class="page">
-    <h2 class="title1 title1__capped">
-      {{#if this.application.title}}
-        Recommendations for your publication "{{this.application.title}}"
-      {{else}}
-        Your Recommendations
-      {{/if}}
-    </h2>
+  <div class="header">
+    <h1 class="header__title">
+      Recommendations for you
+    </h1>
 
-    <div class="icon-button" role="button" {{on "click" this.print}}>
+    <p class="header__text">
+      This wizard helps you create more user-friendly, modern publications. Answer some simple questions and receive
+      recommendations for your publication.
+    </p>
+
+    <div class="header__button" role="button" {{on "click" this.print}}>
       <Icons::Print />
       <span>Print Page</span>
     </div>
 
-    <div class="icon-button" role="button" {{on "click" this.share}}>
+    <div class="header__button" role="button" {{on "click" this.share}}>
       <Icons::Link />
       <span>Share Page</span>
     </div>
+  </div>
 
+  <div class="page">
     <Catalog @topics={{this.filteredTopics}} @recommendations={{this.filteredGroupedRecommendations}} />
   </div>
 {{else}}
+  <div class="header">
+    <h1 class="header__title">
+      Questions on your publication
+    </h1>
+
+    <p class="header__text">
+      In the context of the Publication Wizard, a publication can be any type of published content. This includes press
+      releases, leaflets, brochures, assessments, briefs and summaries, reports, studies and books both in print and
+      online.
+    </p>
+  </div>
+
   <div class="page">
     <h1 class="title1 title1__capped">
       {{get this.data.questionTopics (sub this.page 1)}}
