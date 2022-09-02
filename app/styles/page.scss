@@ -134,10 +134,11 @@
     width: 100%;
     box-sizing: border-box;
     padding: 20px;
-    border: 3px solid #c2c2c2;
-    border-radius: 10px;
-    font-size: 21px;
-    color: $black;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    color: $dark-grey;
+    background-color: $shade;
 
     &:focus {
       border-color: $blue;
@@ -158,29 +159,32 @@
     display: inline-block;
     padding: 10px 30px;
     margin: 5px 0;
-    border: 2px solid $light-grey;
-    border-radius: 26px;
     pointer-events: all;
-    font-size: 21px;
+    font-size: 18px;
     cursor: pointer;
+    background: white;
+    border: 2px solid $other-grey;
+    box-shadow: 0 2px 4px 0 rgba(205, 205, 205, 0.5);
+    border-radius: 8px;
 
     &.checked {
-      background: $blue;
       border: 2px solid $blue;
-      border-radius: 26px;
-      color: white;
+      border-color: $blue;
+      color: $blue;
     }
   }
 
   .button {
     display: inline-block;
-    padding: 20px 50px;
-    border: 2px solid $light-grey;
-    border-radius: 10px;
-    font-size: 21px;
-    color: $black;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
+    background: $shade;
+    box-shadow: 0 2px 4px 0 rgba(205, 205, 205, 0.5);
+    font-size: 18px;
+    color: $dark-grey;
 
     &__primary {
       background: $blue;
