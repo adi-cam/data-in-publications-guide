@@ -44,7 +44,7 @@ export default class extends Controller {
     // match condition by expression
     let matched = condition.length === 0;
     for (let expression of condition) {
-      if (evaluate(this.answerData, expression.replaceAll(/\d+/g, '_$&'))) {
+      if (evaluate(this.answerData, expression.replace(/\d+/g, '_$&'))) {
         matched = true;
       }
     }
