@@ -3,10 +3,6 @@
   margin: 100px auto;
   padding: 0 50px 100px;
 
-  .statement {
-    margin-top: 115px;
-  }
-
   .section {
     margin-top: 100px;
 
@@ -20,13 +16,10 @@
   }
 
   .group {
-    border-bottom: 2px solid $blue;
-    padding: 15px 0;
+    padding: 15px 20px;
     margin: 0;
-
-    &:first-of-type {
-      border-top: 2px solid $blue;
-    }
+    box-shadow: 0 2px 8px 0 rgba(205, 205, 205, 0.5);
+    border-radius: 8px;
   }
 
   p {
