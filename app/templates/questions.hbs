@@ -53,9 +53,9 @@
   </div>
 
   <div class="page">
-    <h1 class="title1 title1__capped">
+    <h2 class="title1 title1__capped">
       {{get this.data.questionTopics (sub this.page 1)}}
-    </h1>
+    </h2>
 
     {{#each (get this.filteredGroupedQuestions (get this.data.questionTopics (sub this.page 1))) as |question|}}
       <div class="question">
