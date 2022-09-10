@@ -1,0 +1,68 @@
+.section {
+  margin-top: 100px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    &__title {
+      margin-top: 0;
+      font-size: 30px;
+      font-weight: normal;
+      line-height: 40px;
+      color: $black;
+    }
+
+    &__button {
+      font-size: 14px;
+      font-weight: bold;
+      color: $blue;
+      border: none;
+      background: none;
+      padding: 0;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+
+  &__group {
+    padding: 15px 20px;
+    margin: 0;
+    box-shadow: 0 2px 8px 0 rgba(205, 205, 205, 0.5);
+    border-radius: 8px;
+
+    &__title {
+      font-size: 26px;
+      font-weight: normal;
+      line-height: 40px;
+      color: $black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      cursor: pointer;
+
+      svg {
+        margin-left: 20px;
+        flex-shrink: 0;
+
+        polyline {
+          fill: none;
+          stroke: $black;
+        }
+      }
+    }
+
+    &__sub-title {
+      margin: 35px 0 10px;
+      font-size: 14px;
+      color: $dark-grey;
+      line-height: 20px;
+    }
+  }
+}

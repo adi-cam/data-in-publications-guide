@@ -12,42 +12,9 @@
   color: $black;
 }
 
-.title3 {
-  font-size: 26px;
-  font-weight: normal;
-  line-height: 40px;
-  color: $black;
-}
-
-.title4 {
-  margin: 35px 0 10px;
-  font-size: 14px;
-  color: $dark-grey;
-  line-height: 20px;
-}
-
 .title1,
-.title2,
-.title3,
-.title4 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  svg {
-    margin-left: 20px;
-
-    polyline {
-      fill: none;
-      stroke: $black;
-    }
-  }
-
+.title2 {
   &__capped {
     margin: 0;
-  }
-
-  &__button {
-    cursor: pointer;
   }
 }

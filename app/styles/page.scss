@@ -2,42 +2,6 @@
   width: 640px;
   margin: 100px auto;
 
-  .section {
-    margin-top: 100px;
-
-    &:first-of-type {
-      margin-top: 0;
-    }
-
-    &__head {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-
-      &__title {
-        margin-top: 0;
-      }
-
-      &__button {
-        font-size: 14px;
-        font-weight: bold;
-        color: $blue;
-        border: none;
-        background: none;
-        padding: 0;
-        margin-left: 10px;
-        cursor: pointer;
-      }
-    }
-  }
-
-  .group {
-    padding: 15px 20px;
-    margin: 0;
-    box-shadow: 0 2px 8px 0 rgba(205, 205, 205, 0.5);
-    border-radius: 8px;
-  }
-
   p {
     margin: 15px 0;
     line-height: 24px;

@@ -11,7 +11,7 @@
 {{#each-in @recommendations as |topic recommendations|}}
   <div class="section">
     <div class="section__head">
-      <h2 class="section__head__title title2" id={{slug topic}}>
+      <h2 class="section__head__title" id={{slug topic}}>
         {{topic}}
       </h2>
 
@@ -27,13 +27,9 @@
     </div>
 
     {{#each recommendations as |recommendation|}}
-      <div class="group">
+      <div class="section__group">
         {{#let (get this.state recommendation.id) as |open|}}
-          <h3
-            role="button"
-            class="title3 title3__capped title3__button"
-            {{on "click" (fn this.open recommendation.id (not open))}}
-          >
+          <h3 role="button" class="section__group__title" {{on "click" (fn this.open recommendation.id (not open))}}>
             <span>{{recommendation.title}}</span>
 
             {{#if open}}
@@ -60,7 +56,7 @@
             {{/if}}
 
             {{#if recommendation.resources}}
-              <h4 class="title4">
+              <h4 class="section__group__sub-title">
                 Resources
               </h4>
 
@@ -76,7 +72,7 @@
             {{/if}}
 
             {{#if recommendation.contacts}}
-              <h4 class="title4">
+              <h4 class="section__group__sub-title">
                 Contacts
               </h4>
 
@@ -92,7 +88,7 @@
             {{/if}}
 
             {{#if recommendation.examples}}
-              <h4 class="title4">
+              <h4 class="section__group__sub-title">
                 Examples
               </h4>
 
