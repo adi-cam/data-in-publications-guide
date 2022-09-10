@@ -67,7 +67,7 @@
     border: none;
     border-radius: 8px;
     font-size: 18px;
-    color: $dark-grey;
+    color: $black;
     background-color: $shade;
 
     &:focus {
@@ -82,6 +82,9 @@
 
   .controls {
     margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
   }
 
   .radio,
@@ -102,6 +105,10 @@
       border-color: $blue;
       color: $blue;
     }
+  }
+
+  .radio {
+    text-align: center;
   }
 
   .button {

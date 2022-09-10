@@ -1,7 +1,11 @@
 <div class="sub-nav-wrapper">
   <div class="sub-nav">
     {{#each this.data.questionTopics as |topic index|}}
-      <LinkTo class="sub-nav__item" @route="questions" @query={{hash page=(add index 1)}}>
+      <LinkTo
+        class="sub-nav__item {{if (eq this.pageNum (add index 1)) 'active'}}"
+        @route="questions"
+        @query={{hash page=(add index 1)}}
+      >
         {{topic}}
       </LinkTo>
 
@@ -83,27 +87,25 @@
         {{else if (or (eq question.format "multiple") (eq question.format "single"))}}
           <div class="controls">
             {{#each question.options as |option|}}
-              <div>
-                {{#if (eq question.format "multiple")}}
-                  <div
-                    role="checkbox"
-                    class="checkbox {{if (get this.answers option.id) 'checked'}}"
-                    aria-checked={{get this.answers option.id}}
-                    {{on "click" (fn this.toggleAnswer question.id option.id (not (get this.answers option.id)))}}
-                  >
-                    {{option.title}}
-                  </div>
-                {{else if (eq question.format "single")}}
-                  <div
-                    role="radio"
-                    class="radio {{if (eq (get this.answers question.id) option.id) 'checked'}}"
-                    aria-checked={{eq (get this.answers question.id) option.id}}
-                    {{on "click" (fn this.setAnswer question.id option.id)}}
-                  >
-                    {{option.title}}
-                  </div>
-                {{/if}}
-              </div>
+              {{#if (eq question.format "multiple")}}
+                <div
+                  role="checkbox"
+                  class="checkbox {{if (get this.answers option.id) 'checked'}}"
+                  aria-checked={{get this.answers option.id}}
+                  {{on "click" (fn this.toggleAnswer question.id option.id (not (get this.answers option.id)))}}
+                >
+                  {{option.title}}
+                </div>
+              {{else if (eq question.format "single")}}
+                <div
+                  role="radio"
+                  class="radio {{if (eq (get this.answers question.id) option.id) 'checked'}}"
+                  aria-checked={{eq (get this.answers question.id) option.id}}
+                  {{on "click" (fn this.setAnswer question.id option.id)}}
+                >
+                  {{option.title}}
+                </div>
+              {{/if}}
             {{/each}}
           </div>
         {{/if}}

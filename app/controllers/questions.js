@@ -13,6 +13,10 @@ export default class extends Controller {
   @tracked title = '';
   @tracked answers = {};
 
+  get pageNum() {
+    return parseInt(this.page);
+  }
+
   get filteredGroupedQuestions() {
     return Object.fromEntries(
       Object.entries(this.data.groupedQuestions).map((group) => {
