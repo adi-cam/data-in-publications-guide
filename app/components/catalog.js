@@ -16,4 +16,11 @@ export default class extends Component {
       this.state = this.state; // eslint-disable-line
     }
   }
+
+  @action closeAll(recommendations) {
+    for (const recommendation of recommendations) {
+      this.state[recommendation.id] = false;
+      this.state = this.state; // eslint-disable-line
+    }
+  }
 }

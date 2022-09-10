@@ -9,8 +9,25 @@
       margin-top: 0;
     }
 
-    .title2 {
-      margin-top: 0;
+    &__head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+      &__title {
+        margin-top: 0;
+      }
+
+      &__button {
+        font-size: 14px;
+        font-weight: bold;
+        color: $blue;
+        border: none;
+        background: none;
+        padding: 0;
+        margin-left: 10px;
+        cursor: pointer;
+      }
     }
   }
 
