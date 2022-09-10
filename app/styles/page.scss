@@ -6,10 +6,6 @@
     margin: 15px 0;
     line-height: 24px;
 
-    &.capped-bottom {
-      margin-bottom: 0;
-    }
-
     a {
       color: $black;
       text-decoration: none;
@@ -30,10 +26,6 @@
     &.large {
       font-size: 21px;
       line-height: 30px;
-    }
-
-    &.bold {
-      font-weight: bold;
     }
   }
 
@@ -92,6 +84,12 @@
     text-align: center;
   }
 
+  .buttons {
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-between;
+  }
+
   .button {
     display: inline-block;
     padding: 15px 20px;
@@ -109,11 +107,5 @@
       border-color: $blue;
       color: white;
     }
-  }
-
-  .buttons {
-    display: flex;
-    margin-top: 100px;
-    justify-content: space-between;
   }
 }
