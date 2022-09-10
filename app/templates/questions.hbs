@@ -57,13 +57,13 @@
   </div>
 
   <div class="page">
-    <h2 class="title1 title1__capped">
+    <h2 class="page__title">
       {{get this.data.questionTopics (sub this.page 1)}}
     </h2>
 
     {{#each (get this.filteredGroupedQuestions (get this.data.questionTopics (sub this.page 1))) as |question|}}
       <div class="question">
-        <h2 class="title2 title2__capped">
+        <h2 class="question__title">
           {{question.title}}
         </h2>
 

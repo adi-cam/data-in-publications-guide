@@ -2,6 +2,14 @@
   width: 640px;
   margin: 100px auto;
 
+  &__title {
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 60px;
+    color: $black;
+    margin: 0;
+  }
+
   p {
     margin: 15px 0;
     line-height: 24px;
@@ -31,6 +39,14 @@
 
   .question {
     margin: 75px 0;
+
+    &__title {
+      font-size: 30px;
+      font-weight: normal;
+      line-height: 40px;
+      color: $black;
+      margin: 0;
+    }
   }
 
   .input {
