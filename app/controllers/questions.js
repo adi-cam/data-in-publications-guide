@@ -9,7 +9,7 @@ export default class extends Controller {
 
   queryParams = ['page', 'title', 'answers'];
 
-  @tracked page = 1;
+  @tracked page = '1';
   @tracked title = '';
   @tracked answers = {};
 
