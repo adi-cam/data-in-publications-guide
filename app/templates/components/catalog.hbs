@@ -40,19 +40,22 @@
           </h3>
 
           {{#if open}}
-            <p>
-              {{#if recommendation.advanced}}
-                <strong>Basic</strong>:
-              {{/if}}
+            <h4 class="section__group__sub-title">
+              Basic
+            </h4>
 
+            <div class="section__group__text">
               {{recommendation.basic}}
-            </p>
+            </div>
 
             {{#if recommendation.advanced}}
-              <p>
-                <strong>Advanced</strong>:
+              <h4 class="section__group__sub-title">
+                Advanced
+              </h4>
+
+              <div class="section__group__text">
                 {{recommendation.advanced}}
-              </p>
+              </div>
             {{/if}}
 
             {{#if recommendation.resources}}
@@ -61,13 +64,13 @@
               </h4>
 
               {{#each recommendation.resources as |resource|}}
-                <p>
+                <div class="section__group__text">
                   <a href={{resource.link}} rel="noopener noreferrer">
                     <Icons::External />
                     <strong>{{resource.title}}</strong>
                   </a><br />
                   {{resource.short}}
-                </p>
+                </div>
               {{/each}}
             {{/if}}
 
@@ -77,13 +80,13 @@
               </h4>
 
               {{#each recommendation.contacts as |contact|}}
-                <p>
+                <div class="section__group__text">
                   <a href="mailto:{{contact.link}}" rel="noopener noreferrer">
                     <Icons::External />
                     <strong>{{contact.title}}</strong>
                   </a><br />
                   {{contact.short}}
-                </p>
+                </div>
               {{/each}}
             {{/if}}
 
@@ -93,13 +96,13 @@
               </h4>
 
               {{#each recommendation.examples as |example|}}
-                <p>
+                <div class="section__group__text">
                   <a href={{example.link}} rel="noopener noreferrer">
                     <Icons::External />
                     <strong>{{example.title}}</strong>
                   </a><br />
                   {{example.short}}
-                </p>
+                </div>
               {{/each}}
             {{/if}}
           {{/if}}

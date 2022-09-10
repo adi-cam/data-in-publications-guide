@@ -59,10 +59,32 @@
     }
 
     &__sub-title {
-      margin: 35px 0 10px;
+      margin: 21px 0 0;
       font-size: 14px;
       color: $dark-grey;
       line-height: 20px;
+    }
+
+    &__text {
+      font-size: 18px;
+      line-height: 26px;
+
+      a {
+        color: $black;
+        text-decoration: none;
+
+        svg {
+          margin-right: 3px;
+        }
+
+        &:hover {
+          color: $blue;
+
+          svg path {
+            fill: $blue;
+          }
+        }
+      }
     }
   }
 }
