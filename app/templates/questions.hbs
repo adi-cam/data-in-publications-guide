@@ -24,10 +24,10 @@
       Recommendations for you
     </h1>
 
-    <p class="header__text">
+    <div class="header__text">
       This wizard helps you create more user-friendly, modern publications. Answer some simple questions and receive
       recommendations for your publication.
-    </p>
+    </div>
 
     <div class="header__button" role="button" {{on "click" this.print}}>
       <Icons::Print />
@@ -49,11 +49,11 @@
       Questions on your publication
     </h1>
 
-    <p class="header__text">
+    <div class="header__text">
       In the context of the Publication Wizard, a publication can be any type of published content. This includes press
       releases, leaflets, brochures, assessments, briefs and summaries, reports, studies and books both in print and
       online.
-    </p>
+    </div>
   </div>
 
   <div class="page">
@@ -62,35 +62,34 @@
     </h2>
 
     {{#each (get this.filteredGroupedQuestions (get this.data.questionTopics (sub this.page 1))) as |question|}}
-      <div class="question">
-        <h2 class="question__title">
+      <div class="wizard">
+        <h2 class="wizard__title">
           {{question.title}}
         </h2>
 
-        <p class="large">
+        <div class="wizard__text">
           {{question.desc}}
-        </p>
+        </div>
 
         {{#if (eq question.format "text")}}
-          <p>
-            <label>
-              <input
-                type="text"
-                class="input"
-                name={{question.id}}
-                placeholder="Publication Title"
-                value={{this.title}}
-                {{on "change" this.setTitle}}
-              />
-            </label>
-          </p>
+          <div class="wizard__controls">
+            <input
+              type="text"
+              class="wizard__input"
+              name={{question.id}}
+              placeholder="Publication Title"
+              aria-label="Publication Title"
+              value={{this.title}}
+              {{on "change" this.setTitle}}
+            />
+          </div>
         {{else if (or (eq question.format "multiple") (eq question.format "single"))}}
-          <div class="controls">
+          <div class="wizard__controls wizard__controls--grid">
             {{#each question.options as |option|}}
               {{#if (eq question.format "multiple")}}
                 <div
                   role="checkbox"
-                  class="checkbox {{if (get this.answers option.id) 'checked'}}"
+                  class="wizard__checkbox {{if (get this.answers option.id) 'checked'}}"
                   aria-checked={{get this.answers option.id}}
                   {{on "click" (fn this.toggleAnswer question.id option.id (not (get this.answers option.id)))}}
                 >
@@ -99,7 +98,7 @@
               {{else if (eq question.format "single")}}
                 <div
                   role="radio"
-                  class="radio {{if (eq (get this.answers question.id) option.id) 'checked'}}"
+                  class="wizard__radio {{if (eq (get this.answers question.id) option.id) 'checked'}}"
                   aria-checked={{eq (get this.answers question.id) option.id}}
                   {{on "click" (fn this.setAnswer question.id option.id)}}
                 >
@@ -111,16 +110,20 @@
         {{/if}}
       </div>
     {{else}}
-      <div class="question">
-        <p class="large">
+      <div class="wizard">
+        <div class="wizard__text">
           No questions here, please continue.
-        </p>
+        </div>
       </div>
     {{/each}}
 
-    <div class="buttons">
+    <div class="wizard__buttons">
       {{#if (gt this.page 1)}}
-        <button type="button" class="button" {{on "click" (queue (scroll-top) (fn (mut this.page) (sub this.page 1)))}}>
+        <button
+          type="button"
+          class="wizard__button"
+          {{on "click" (queue (scroll-top) (fn (mut this.page) (sub this.page 1)))}}
+        >
           Prev
         </button>
       {{else}}
@@ -130,13 +133,13 @@
       {{#if (gt this.data.questionTopics.length this.page)}}
         <button
           type="button"
-          class="button button__primary"
+          class="wizard__button wizard__button__primary"
           {{on "click" (queue (scroll-top) (fn (mut this.page) (add this.page 1)))}}
         >
           Next
         </button>
       {{else}}
-        <LinkTo @route="questions" @query={{hash page="rec"}} class="button button__primary">
+        <LinkTo @route="questions" @query={{hash page="rec"}} class="wizard__button wizard__button__primary">
           Get Recommendations
         </LinkTo>
       {{/if}}
