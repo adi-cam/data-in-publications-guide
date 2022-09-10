@@ -108,9 +108,9 @@ export default class extends Service {
       this.recommendations.push({
         id: id++,
         topic: recommendation['topic'],
-        title: recommendation['title'],
-        basic: recommendation['basic'],
-        advanced: recommendation['advanced'],
+        title: recommendation['title'] || recommendation['title old'],
+        why: recommendation['why'],
+        how: recommendation['how'],
         condition: parseCondition(recommendation['condition']),
         resources: recommendation['resources']
           .split(',')
@@ -124,6 +124,8 @@ export default class extends Service {
           .split(',')
           .filter((id) => !!id)
           .map((id) => examples[id]),
+        image: recommendation['image'],
+        gallery: recommendation['gallery'].split(','),
       });
     }
   }
