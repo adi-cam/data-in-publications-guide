@@ -104,6 +104,10 @@ export default class extends Service {
     // reformat recommendations
     let id = 1;
     for (let recommendation of rawRecommendations) {
+      // parse gallery
+      const galleryImages = recommendation['gallery-image'].split(',').filter((s) => !!s);
+      const galleryTexts = recommendation['gallery-text'].split('|').filter((s) => !!s);
+
       // add recommendation
       this.recommendations.push({
         id: id++,
@@ -125,7 +129,12 @@ export default class extends Service {
           .filter((id) => !!id)
           .map((id) => examples[id]),
         image: recommendation['image'],
-        gallery: recommendation['gallery'].split(','),
+        gallery: galleryImages.map((image, index) => {
+          return {
+            image: image,
+            text: galleryTexts[index],
+          };
+        }),
       });
     }
   }
