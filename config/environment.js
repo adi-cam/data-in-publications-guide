@@ -5,7 +5,7 @@ module.exports = function (environment) {
     modulePrefix: 'pubwiz',
     environment,
     rootURL: '/eu-pubwiz/',
-    locationType: 'auto',
+    locationType: 'history',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
