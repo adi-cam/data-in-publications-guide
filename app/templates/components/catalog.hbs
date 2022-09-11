@@ -10,21 +10,19 @@
 
 {{#each-in @recommendations as |topic recommendations|}}
   <div class="section">
-    <div class="section__head">
-      <h2 class="section__head__title" id={{slug topic}}>
-        <img src="icons/{{slug topic}}.svg" alt="Topic Illustration" />
-        <span>{{topic}}</span>
-      </h2>
+    <h2 class="section__title" id={{slug topic}}>
+      <img src="icons/{{slug topic}}.svg" alt="Topic Illustration" />
+      <span>{{topic}}</span>
+    </h2>
 
-      <div>
-        <button class="section__head__button" type="button" {{on "click" (fn this.openAll recommendations)}}>
-          Open All
-        </button>
+    <div class="section__buttons">
+      <button type="button" {{on "click" (fn this.openAll recommendations)}}>
+        Open All
+      </button>
 
-        <button class="section__head__button" type="button" {{on "click" (fn this.closeAll recommendations)}}>
-          Close All
-        </button>
-      </div>
+      <button type="button" {{on "click" (fn this.closeAll recommendations)}}>
+        Close All
+      </button>
     </div>
 
     {{#each recommendations as |recommendation|}}
