@@ -57,6 +57,15 @@
               </div>
             {{/if}}
 
+            {{#if recommendation.gallery.length}}
+              <div class="section__group__gallery">
+                {{#each recommendation.gallery as |item|}}
+                  <img src="images/{{item.image}}.svg" />
+                  <p>{{item.text}}</p>
+                {{/each}}
+              </div>
+            {{/if}}
+
             {{#if recommendation.resources}}
               <h4 class="section__group__sub-title">
                 Resources

@@ -91,5 +91,11 @@
         }
       }
     }
+
+    &__gallery {
+      background-color: $other-grey;
+      margin: 0 -20px;
+      padding: 20px;
+    }
   }
 }
