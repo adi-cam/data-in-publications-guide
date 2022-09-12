@@ -94,8 +94,14 @@
 
     &__gallery {
       background-color: $other-grey;
-      margin: 0 -20px;
+      margin: 20px -20px 0;
       padding: 20px;
+      font-size: 18px;
+      line-height: 26px;
+
+      p {
+        padding: 0 40px;
+      }
     }
   }
 }

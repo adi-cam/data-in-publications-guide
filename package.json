@@ -20,6 +20,7 @@
     "fmt": "prettier -w ."
   },
   "dependencies": {
+    "@glidejs/glide": "^3.5.2",
     "broccoli-plugin": "^4.0.7",
     "broccoli-source": "^3.0.1",
     "csv-parse": "^4.16.3",
@@ -37,6 +38,7 @@
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
+    "@ember/render-modifiers": "^2.0.4",
     "@ember/test-helpers": "^2.7.0",
     "@glimmer/component": "^1.1.2",
     "@glimmer/tracking": "^1.1.2",

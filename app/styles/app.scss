@@ -1,5 +1,7 @@
 @import 'normalize';
 
+@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
+
 @font-face {
   font-family: 'Ubuntu';
   font-style: normal;
@@ -29,6 +31,7 @@ $black: #1a1a1a;
 @import 'page';
 @import 'section';
 @import 'sidebar';
+@import 'slideshow';
 @import 'sub-nav';
 @import 'wizard';
 

@@ -1,0 +1,41 @@
+.glide__arrow {
+  position: absolute;
+  width: 11px;
+  height: 20px;
+  display: inline-block;
+  border: none;
+  background: none;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+
+  &--left {
+    left: 5px;
+  }
+
+  &--right {
+    right: 5px;
+  }
+}
+
+.glide__bullets {
+  display: flex;
+  justify-content: center;
+}
+
+.glide__bullet {
+  width: 8px;
+  height: 8px;
+  margin: 0 3px;
+  padding: 0;
+  display: inline-block;
+  background-color: $grey;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+
+  &--active {
+    background-color: $dark-grey;
+  }
+}

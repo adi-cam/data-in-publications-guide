@@ -59,10 +59,10 @@
 
             {{#if recommendation.gallery.length}}
               <div class="section__group__gallery">
-                {{#each recommendation.gallery as |item|}}
+                <Slideshow @items={{recommendation.gallery}} as |item|>
                   <img src="images/{{item.image}}.svg" />
                   <p>{{item.text}}</p>
-                {{/each}}
+                </Slideshow>
               </div>
             {{/if}}
 

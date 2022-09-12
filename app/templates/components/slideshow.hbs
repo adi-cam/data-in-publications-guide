@@ -1,0 +1,27 @@
+<div class="glide" {{did-insert this.setup}} {{will-destroy this.teardown}}>
+  <div class="glide__track" data-glide-el="track">
+    <ul class="glide__slides">
+      {{#each @items as |item|}}
+        <li class="glide__slide">
+          {{yield item}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="glide__arrows" data-glide-el="controls">
+    <button type="button" class="glide__arrow glide__arrow--left" data-glide-dir="<">
+      <Icons::ChevronLeft />
+    </button>
+
+    <button type="button" class="glide__arrow glide__arrow--right" data-glide-dir=">">
+      <Icons::ChevronRight />
+    </button>
+  </div>
+
+  <div class="glide__bullets" data-glide-el="controls[nav]">
+    {{#each @items as |_ index|}}
+      <button type="button" class="glide__bullet" data-glide-dir="={{index}}"></button>
+    {{/each}}
+  </div>
+</div>
