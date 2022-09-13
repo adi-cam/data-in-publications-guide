@@ -69,6 +69,14 @@
       }
     }
 
+    &__image {
+      margin: 20px 0;
+
+      img {
+        border-radius: 3px;
+      }
+    }
+
     &__sub-title {
       margin: 21px 0 0;
       font-size: 14px;

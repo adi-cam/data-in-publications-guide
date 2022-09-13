@@ -45,6 +45,12 @@
           </h3>
 
           {{#if open}}
+            {{#if recommendation.image}}
+              <div class="section__group__image">
+                <img src="/eu-pubwiz/images/{{recommendation.image}}.svg" />
+              </div>
+            {{/if}}
+
             <h4 class="section__group__sub-title">
               Why
             </h4>
