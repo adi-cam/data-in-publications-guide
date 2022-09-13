@@ -12,8 +12,14 @@
   <div class="section">
     <h2 class="section__title" id={{slug topic}}>
       <img src="/eu-pubwiz/icons/{{slug topic}}.svg" alt="Topic Illustration" />
-      <span>{{topic}}</span>
+      <span>
+        {{get (get this.data.topics topic) "title"}}
+      </span>
     </h2>
+
+    <p class="section__text">
+      {{get (get this.data.topics topic) "description"}}
+    </p>
 
     <div class="section__buttons">
       <button type="button" {{on "click" (fn this.openAll recommendations)}}>

@@ -24,6 +24,7 @@ function parseCondition(str) {
 export default class extends Service {
   questions = [];
   recommendations = [];
+  topics = {};
 
   get questionTopics() {
     return this.questions.map((question) => question.topic).filter(onlyUnique);
@@ -43,11 +44,12 @@ export default class extends Service {
 
   async load() {
     // load data
-    const [rawQuestions, rawRecommendations, rawResources, rawExamples] = await Promise.all([
+    const [rawQuestions, rawRecommendations, rawResources, rawExamples, rawTopics] = await Promise.all([
       loadJSON('/eu-pubwiz/questions.json'),
       loadJSON('/eu-pubwiz/recommendations.json'),
       loadJSON('/eu-pubwiz/resources.json'),
       loadJSON('/eu-pubwiz/examples.json'),
+      loadJSON('/eu-pubwiz/topics.json'),
     ]);
 
     // reset state
@@ -136,6 +138,16 @@ export default class extends Service {
           };
         }),
       });
+    }
+
+    // reformat topics
+    for (let topic of rawTopics) {
+      this.topics[topic['topic']] = {
+        name: topic['topic'],
+        icon: topic['icon'],
+        title: topic['title'],
+        description: topic['description'],
+      };
     }
   }
 }
