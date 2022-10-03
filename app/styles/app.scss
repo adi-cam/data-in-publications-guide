@@ -16,6 +16,7 @@
   src: local(''), url('../fonts/ubuntu-bold.woff2') format('woff2'), url('../fonts/ubuntu-bold.woff') format('woff');
 }
 
+$background: #f0f4fb;
 $blue: #062fc5;
 $dark-blue: #00326c;
 $grey: #404040;
@@ -25,6 +26,7 @@ $shade: #f9f9f9;
 $light-grey: #c2c2c2;
 $black: #1a1a1a;
 
+@import 'footer';
 @import 'header';
 @import 'hero';
 @import 'nav';

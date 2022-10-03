@@ -1,0 +1,15 @@
+.footer-wrapper {
+  overflow: hidden;
+  padding: 50px;
+  background-color: $background;
+}
+
+.footer {
+  display: grid;
+  max-width: 1000px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+  font-size: 14px;
+  line-height: 25px;
+}

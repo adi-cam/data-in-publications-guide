@@ -1,15 +1,39 @@
 <div class="nav-wrapper">
   <nav class="nav">
     <div>
-      <LinkTo class="nav__item" @route="index">
-        Browse Catalogue
+      <LinkTo class="nav__item nav__item--title" @route="index">
+        Data in Publications
+      </LinkTo>
+
+      <LinkTo class="nav__item" @route="about">
+        About
       </LinkTo>
     </div>
-
-    <LinkTo class="nav__item nav__item--title" @route="index">
-      Publication Wizard
-    </LinkTo>
   </nav>
 </div>
 
 {{outlet}}
+
+<div class="footer-wrapper">
+  <div class="footer">
+    <div>
+      A Prototype by the Publications Office of the European Union
+    </div>
+
+    <div>
+      Content<br />
+      Publications Office of the European Union<br /><br />
+      Development and maintenance<br />
+      Adina Renner<br /><br />
+      Queries and Feedback:<br />
+      OP-DATA-EUROPA-EU@publications.europa.eu
+    </div>
+
+    <div>
+      Copy link<br />
+      Email link<br />
+      Download guide as checklist<br />
+      Download guide with descriptions
+    </div>
+  </div>
+</div>
