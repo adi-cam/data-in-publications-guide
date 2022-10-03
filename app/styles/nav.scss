@@ -16,7 +16,7 @@
 
   &__item {
     display: inline-block;
-    padding: 22px 0;
+    padding: 45px 0;
     margin-left: 50px;
 
     &:first-child {
@@ -28,7 +28,6 @@
       border: none;
     }
 
-    &.active,
     &:hover {
       color: $blue;
     }
