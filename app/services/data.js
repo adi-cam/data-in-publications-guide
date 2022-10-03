@@ -22,17 +22,8 @@ function parseCondition(str) {
 }
 
 export default class extends Service {
-  questions = [];
   recommendations = [];
   topics = {};
-
-  get questionTopics() {
-    return this.questions.map((question) => question.topic).filter(onlyUnique);
-  }
-
-  get groupedQuestions() {
-    return groupBy(this.questions, 'topic');
-  }
 
   get recommendationTopics() {
     return this.recommendations.map((recommendation) => recommendation.topic).filter(onlyUnique);
@@ -44,8 +35,7 @@ export default class extends Service {
 
   async load() {
     // load data
-    const [rawQuestions, rawRecommendations, rawResources, rawExamples, rawTopics] = await Promise.all([
-      loadJSON('/eu-pubwiz/questions.json'),
+    const [rawRecommendations, rawResources, rawExamples, rawTopics] = await Promise.all([
       loadJSON('/eu-pubwiz/recommendations.json'),
       loadJSON('/eu-pubwiz/resources.json'),
       loadJSON('/eu-pubwiz/examples.json'),
@@ -53,35 +43,7 @@ export default class extends Service {
     ]);
 
     // reset state
-    this.questions = [];
     this.recommendations = [];
-
-    // reformat questions
-    for (let question of rawQuestions) {
-      if (question['QN']) {
-        // add question
-        this.questions.push({
-          id: `${question['QN']}`,
-          number: question['QN'],
-          topic: question['Topic'],
-          title: question['Questions'],
-          desc: question['Description'] || null,
-          condition: parseCondition(question['Condition']),
-          format: question['Format'],
-          options: [],
-        });
-      }
-
-      // add option
-      if (question['OL']) {
-        const last = this.questions.slice(-1)[0];
-        last.options.push({
-          id: `${last.number}${question['OL']}`,
-          letter: question['OL'],
-          title: question['Options'],
-        });
-      }
-    }
 
     // prepare resources
     const resources = {};

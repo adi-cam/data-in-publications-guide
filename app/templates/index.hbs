@@ -10,8 +10,8 @@
     The Data Documents Guide helps you produce and publish documents with data, charts, and text. Answer some simple
     questions to receive selected recommendations or browse the recommendations catalogue.
   </div>
+</div>
 
-  <LinkTo @route="questions" class="hero__button">
-    Get Recommendations
-  </LinkTo>
+<div class="page">
+  <Catalog @topics={{this.data.recommendationTopics}} @recommendations={{this.data.groupedRecommendations}} />
 </div>
