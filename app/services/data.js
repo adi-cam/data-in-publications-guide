@@ -13,10 +13,6 @@ function groupBy(list, key) {
   }, {});
 }
 
-function onlyUnique(value, index, self) {
-  return self.indexOf(value) === index;
-}
-
 function parseCondition(str) {
   return str ? str.split(',') : [];
 }
@@ -24,10 +20,7 @@ function parseCondition(str) {
 export default class extends Service {
   recommendations = [];
   topics = {};
-
-  get recommendationTopics() {
-    return this.recommendations.map((recommendation) => recommendation.topic).filter(onlyUnique);
-  }
+  topicNames = [];
 
   get groupedRecommendations() {
     return groupBy(this.recommendations, 'topic');
@@ -110,6 +103,7 @@ export default class extends Service {
         title: topic['title'],
         description: topic['description'],
       };
+      this.topicNames.push(topic['topic']);
     }
   }
 }
