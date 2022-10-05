@@ -15,11 +15,8 @@ export default modifier((element, args, { linkSelector = '', elementSelector = '
     for (const [i, element] of elements.entries()) {
       const elementOffset = element.getBoundingClientRect().top + scrollOffset;
       if (elementOffset <= scrollOffset + 5) {
-        last = i - 1;
+        last = i;
       }
-    }
-    if (last < 0) {
-      last = 0;
     }
 
     // unset class
