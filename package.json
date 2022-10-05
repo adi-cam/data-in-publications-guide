@@ -33,8 +33,7 @@
     "ember-truth-helpers": "^3.0.0",
     "normalize.css": "^8.0.1",
     "prember": "^1.0.5",
-    "sass": "^1.39.2",
-    "simple-evaluate": "^1.4.3"
+    "sass": "^1.39.2"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",

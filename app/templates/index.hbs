@@ -13,13 +13,13 @@
     </div>
 
     <div class="hero__link">
-      <a href="#structure" {{link-inline}}>
+      <a href="#catalog" {{link-inline}}>
         Explore the guide
       </a>
     </div>
   </div>
 </div>
 
-<div class="page">
-  <Catalog @topics={{this.data.topicNames}} @recommendations={{this.data.groupedRecommendations}} />
+<div class="page" id="catalog">
+  <Catalog />
 </div>

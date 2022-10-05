@@ -13,18 +13,8 @@ function groupBy(list, key) {
   }, {});
 }
 
-function parseCondition(str) {
-  return str ? str.split(',') : [];
-}
-
 export default class extends Service {
-  recommendations = [];
   topics = {};
-  topicNames = [];
-
-  get groupedRecommendations() {
-    return groupBy(this.recommendations, 'topic');
-  }
 
   async load() {
     // load data
@@ -36,7 +26,7 @@ export default class extends Service {
     ]);
 
     // reset state
-    this.recommendations = [];
+    this.topics = [];
 
     // prepare resources
     const resources = {};
@@ -58,21 +48,21 @@ export default class extends Service {
       };
     }
 
-    // reformat recommendations
+    // prepare recommendations
     let id = 1;
+    const recommendations = [];
     for (let recommendation of rawRecommendations) {
       // parse gallery
       const galleryImages = recommendation['gallery-image'].split(',').filter((s) => !!s);
       const galleryTexts = recommendation['gallery-text'].split('|').filter((s) => !!s);
 
       // add recommendation
-      this.recommendations.push({
+      recommendations.push({
         id: id++,
         topic: recommendation['topic'],
         title: recommendation['title'] || recommendation['title old'],
         why: recommendation['why'],
         how: recommendation['how'],
-        condition: parseCondition(recommendation['condition']),
         resources: recommendation['resources']
           .split(',')
           .filter((id) => !!id)
@@ -95,15 +85,18 @@ export default class extends Service {
       });
     }
 
-    // reformat topics
+    // group recommendations
+    const groupedRecommendations = groupBy(recommendations, 'topic');
+
+    // add topics
     for (let topic of rawTopics) {
-      this.topics[topic['topic']] = {
+      this.topics.push({
         name: topic['topic'],
         icon: topic['icon'],
         title: topic['title'],
         description: topic['description'],
-      };
-      this.topicNames.push(topic['topic']);
+        recommendations: groupedRecommendations[topic['topic']],
+      });
     }
   }
 }

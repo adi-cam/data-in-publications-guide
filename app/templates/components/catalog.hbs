@@ -1,39 +1,39 @@
 <ul class="sidebar" {{highlight linkSelector="li a" elementSelector="h2"}}>
-  {{#each @topics as |topic|}}
+  {{#each this.data.topics as |topic|}}
     <li>
-      <a href="#{{slug topic}}" {{link-inline}}>
-        {{topic}}
+      <a href="#{{slug topic.name}}" {{link-inline}}>
+        {{topic.name}}
       </a>
     </li>
   {{/each}}
 </ul>
 
-{{#each-in @recommendations as |topic recommendations|}}
+{{#each this.data.topics as |topic|}}
   <div class="section">
-    <h2 class="section__title" id={{slug topic}}>
+    <h2 class="section__title" id={{slug topic.name}}>
       {{!--
-      <img src="/eu-pubwiz/icons/{{slug topic}}.svg" alt="Topic Illustration" />
+      <img src="/eu-pubwiz/icons/{{slug topic.name}}.svg" alt="Topic Illustration" />
       --}}
       <span>
-        {{get (get this.data.topics topic) "title"}}
+        {{topic.title}}
       </span>
     </h2>
 
     <p class="section__text">
-      {{get (get this.data.topics topic) "description"}}
+      {{topic.description}}
     </p>
 
     <div class="section__buttons">
-      <button type="button" {{on "click" (fn this.openAll recommendations)}}>
+      <button type="button" {{on "click" (fn this.openAll topic.recommendations)}}>
         Open All
       </button>
 
-      <button type="button" {{on "click" (fn this.closeAll recommendations)}}>
+      <button type="button" {{on "click" (fn this.closeAll topic.recommendations)}}>
         Close All
       </button>
     </div>
 
-    {{#each recommendations as |recommendation|}}
+    {{#each topic.recommendations as |recommendation|}}
       {{#let (get this.state recommendation.id) as |open|}}
         <div class="section__group {{if open 'section__group--open'}}">
           <h3 role="button" class="section__group__title" {{on "click" (fn this.open recommendation.id (not open))}}>
@@ -48,12 +48,12 @@
 
           {{#if open}}
             {{!--
-            {{#if recommendation.image}}
-              <div class="section__group__image">
-                <img src="/eu-pubwiz/images/{{recommendation.image}}.svg" />
-              </div>
-            {{/if}}
-            --}}
+          {{#if recommendation.image}}
+            <div class="section__group__image">
+              <img src="/eu-pubwiz/images/{{recommendation.image}}.svg" />
+            </div>
+          {{/if}}
+          --}}
 
             <h4 class="section__group__sub-title">
               Why
@@ -141,4 +141,4 @@
       {{/let}}
     {{/each}}
   </div>
-{{/each-in}}
+{{/each}}
