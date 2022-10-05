@@ -11,7 +11,9 @@
 {{#each-in @recommendations as |topic recommendations|}}
   <div class="section">
     <h2 class="section__title" id={{slug topic}}>
+      {{!--
       <img src="/eu-pubwiz/icons/{{slug topic}}.svg" alt="Topic Illustration" />
+      --}}
       <span>
         {{get (get this.data.topics topic) "title"}}
       </span>
@@ -32,8 +34,8 @@
     </div>
 
     {{#each recommendations as |recommendation|}}
-      <div class="section__group">
-        {{#let (get this.state recommendation.id) as |open|}}
+      {{#let (get this.state recommendation.id) as |open|}}
+        <div class="section__group {{if open 'section__group--open'}}">
           <h3 role="button" class="section__group__title" {{on "click" (fn this.open recommendation.id (not open))}}>
             <span>{{recommendation.title}}</span>
 
@@ -45,11 +47,13 @@
           </h3>
 
           {{#if open}}
+            {{!--
             {{#if recommendation.image}}
               <div class="section__group__image">
                 <img src="/eu-pubwiz/images/{{recommendation.image}}.svg" />
               </div>
             {{/if}}
+            --}}
 
             <h4 class="section__group__sub-title">
               Why
@@ -69,6 +73,7 @@
               </div>
             {{/if}}
 
+            {{!--
             {{#if recommendation.gallery.length}}
               <div class="section__group__gallery">
                 <Slideshow @items={{recommendation.gallery}} as |item|>
@@ -77,6 +82,7 @@
                 </Slideshow>
               </div>
             {{/if}}
+            --}}
 
             {{#if recommendation.resources}}
               <h4 class="section__group__sub-title">
@@ -86,10 +92,13 @@
               {{#each recommendation.resources as |resource|}}
                 <div class="section__group__text">
                   <a href={{resource.link}} rel="noopener noreferrer">
-                    <Icons::External />
                     <strong>{{resource.title}}</strong>
-                  </a><br />
+                    <Icons::External />
+                  </a>
+                  {{!--
+                  <br />
                   {{resource.short}}
+                  --}}
                 </div>
               {{/each}}
             {{/if}}
@@ -102,10 +111,13 @@
               {{#each recommendation.contacts as |contact|}}
                 <div class="section__group__text">
                   <a href="mailto:{{contact.link}}" rel="noopener noreferrer">
-                    <Icons::External />
                     <strong>{{contact.title}}</strong>
-                  </a><br />
+                    <Icons::External />
+                  </a>
+                  {{!--
+                  <br />
                   {{contact.short}}
+                  --}}
                 </div>
               {{/each}}
             {{/if}}
@@ -118,16 +130,19 @@
               {{#each recommendation.examples as |example|}}
                 <div class="section__group__text">
                   <a href={{example.link}} rel="noopener noreferrer">
-                    <Icons::External />
                     <strong>{{example.title}}</strong>
-                  </a><br />
+                    <Icons::External />
+                  </a>
+                  {{!--
+                  <br />
                   {{example.short}}
+                  --}}
                 </div>
               {{/each}}
             {{/if}}
           {{/if}}
-        {{/let}}
-      </div>
+        </div>
+      {{/let}}
     {{/each}}
   </div>
 {{/each-in}}
