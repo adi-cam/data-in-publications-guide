@@ -3,7 +3,7 @@ const { WatchedDir } = require('broccoli-source');
 
 const csvParse = require('csv-parse/lib/sync');
 
-class FeedBuilder extends Plugin {
+class DataBuilder extends Plugin {
   build() {
     this.input.readdirSync('.').forEach((path) => {
       // read file
@@ -21,5 +21,5 @@ class FeedBuilder extends Plugin {
 }
 
 module.exports = function () {
-  return new FeedBuilder([new WatchedDir('data')]);
+  return new DataBuilder([new WatchedDir('data')]);
 };
