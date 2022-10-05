@@ -91,7 +91,14 @@
     &__text {
       font-size: 18px;
       line-height: 26px;
-      margin: 5px 0;
+
+      &--spaced {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
 
       a {
         color: $black;

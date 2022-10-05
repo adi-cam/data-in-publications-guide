@@ -90,7 +90,7 @@
               </h4>
 
               {{#each recommendation.resources as |resource|}}
-                <div class="section__group__text">
+                <div class="section__group__text section__group__text--spaced">
                   <a href={{resource.link}} rel="noopener noreferrer">
                     <strong>{{resource.title}}</strong>
                     <Icons::External />
@@ -107,7 +107,7 @@
               </h4>
 
               {{#each recommendation.contacts as |contact|}}
-                <div class="section__group__text">
+                <div class="section__group__text section__group__text--spaced">
                   <a href="mailto:{{contact.link}}" rel="noopener noreferrer">
                     <strong>{{contact.title}}</strong>
                     <Icons::External />
@@ -124,7 +124,7 @@
               </h4>
 
               {{#each recommendation.examples as |example|}}
-                <div class="section__group__text">
+                <div class="section__group__text section__group__text--spaced">
                   <a href={{example.link}} rel="noopener noreferrer">
                     <strong>{{example.title}}</strong>
                     <Icons::External />
