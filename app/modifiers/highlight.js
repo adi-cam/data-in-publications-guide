@@ -1,41 +1,39 @@
 import { modifier } from 'ember-modifier';
 
-export default modifier((element, args, { linkSelector = '', elementSelector = '', activeClass = 'active' }) => {
-  // define handler
-  const handler = () => {
-    // get scroll offset
-    const scrollOffset = document.documentElement.scrollTop;
+export default modifier(
+  (element, args, { linkSelector = '', elementSelector = '', activeClass = 'active', maxOffset = 50 }) => {
+    // define handler
+    const handler = () => {
+      // get links and elements
+      const links = element.querySelectorAll(linkSelector);
+      const elements = document.querySelectorAll(elementSelector);
 
-    // get links and elements
-    const links = element.querySelectorAll(linkSelector);
-    const elements = document.querySelectorAll(elementSelector);
-
-    // get elements before scroll offset
-    let last = 0;
-    for (const [i, element] of elements.entries()) {
-      const elementOffset = element.getBoundingClientRect().top + scrollOffset;
-      if (elementOffset <= scrollOffset + 5) {
-        last = i;
+      // find active element
+      let active = 0;
+      for (const [i, element] of elements.entries()) {
+        if (element.getBoundingClientRect().top <= maxOffset) {
+          active = i;
+        }
       }
-    }
 
-    // unset class
-    for (const link of links) {
-      link.classList.remove(activeClass);
-    }
+      // unset class
+      for (const link of links) {
+        link.classList.remove(activeClass);
+      }
 
-    // set class
-    links[last].classList.add(activeClass);
-  };
+      // set class
+      links[active].classList.add(activeClass);
+    };
 
-  // call handler
-  handler();
+    // call handler
+    handler();
 
-  // add scroll handler
-  document.addEventListener('scroll', handler);
+    // add scroll handler
+    document.addEventListener('scroll', handler);
 
-  return () => {
-    // remove scroll handler
-    document.removeEventListener('scroll', handler);
-  };
-});
+    return () => {
+      // remove scroll handler
+      document.removeEventListener('scroll', handler);
+    };
+  }
+);
