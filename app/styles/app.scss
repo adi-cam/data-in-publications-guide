@@ -9,6 +9,7 @@
   src: local(''), url('../fonts/ubuntu-regular.woff2') format('woff2'),
     url('../fonts/ubuntu-regular.woff') format('woff');
 }
+
 @font-face {
   font-family: 'Ubuntu';
   font-style: normal;
@@ -26,6 +27,12 @@ $other-grey: #e3e3e3;
 $shade: #f9f9f9;
 $light-grey: #c2c2c2;
 $black: #1a1a1a;
+
+@mixin desktop() {
+  @media all and (min-width: 1000px) {
+    @content;
+  }
+}
 
 @import 'about';
 @import 'footer';

@@ -1,10 +1,11 @@
 .hero-wrapper {
   overflow: hidden;
+  padding: 0 25px;
   background-color: $background;
 }
 
 .hero {
-  width: 1000px;
+  max-width: 1000px;
   margin: 50px auto 50px;
   /*background-image: url('../hero.svg');
   background-repeat: no-repeat;

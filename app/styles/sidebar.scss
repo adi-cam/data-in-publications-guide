@@ -4,7 +4,7 @@
   line-height: 37px;
   margin-bottom: 50px;
 
-  @media all and (min-width: 1000px) {
+  @include desktop() {
     position: sticky;
     height: 0;
     top: 25px;

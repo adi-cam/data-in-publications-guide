@@ -1,26 +1,32 @@
 .footer-wrapper {
   overflow: hidden;
-  padding: 50px;
+  padding: 25px;
   background-color: $background;
 }
 
 .footer {
-  display: grid;
   max-width: 1000px;
   margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 50px;
   font-size: 14px;
   line-height: 25px;
+
+  @include desktop() {
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   p {
     margin: 10px 0;
 
-    &:first-of-type {
-      margin-top: 0;
-    }
-    &:last-of-type {
-      margin-bottom: 0;
+    @include desktop() {
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 

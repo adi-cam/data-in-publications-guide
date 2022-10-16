@@ -1,5 +1,6 @@
 .page {
-  width: 640px;
+  max-width: 640px;
+  padding: 0 25px;
   margin: 100px auto;
 
   &__title {
