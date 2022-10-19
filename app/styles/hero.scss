@@ -44,5 +44,17 @@
     margin-top: 35px;
     color: $dark-grey;
     font-size: 18px;
+
+    svg {
+      height: 10px;
+      margin-left: 5px;
+
+      polyline {
+        fill: none;
+        stroke: $dark-grey;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    }
   }
 }
