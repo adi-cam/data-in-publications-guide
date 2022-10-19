@@ -11,9 +11,8 @@
 {{#each this.data.topics as |topic|}}
   <div class="section">
     <h2 class="section__title" id={{slug topic.name}}>
-      {{!--
-      <img src="/eu-pubwiz/icons/{{slug topic.name}}.svg" alt="Topic Illustration" />
-      --}}
+      <img src="/eu-pubwiz/icons/{{slug topic.name}}.svg" alt={{topic.name}} />
+
       <span>
         {{topic.title}}
       </span>
@@ -47,13 +46,11 @@
           </h3>
 
           {{#if open}}
-            {{!--
-          {{#if recommendation.image}}
-            <div class="section__group__image">
-              <img src="/eu-pubwiz/images/{{recommendation.image}}.svg" />
-            </div>
-          {{/if}}
-          --}}
+            {{#if recommendation.image}}
+              <div class="section__group__image">
+                <img src="/eu-pubwiz/images/{{recommendation.image}}.svg" />
+              </div>
+            {{/if}}
 
             <h4 class="section__group__sub-title">
               Why
@@ -73,7 +70,6 @@
               </div>
             {{/if}}
 
-            {{!--
             {{#if recommendation.gallery.length}}
               <div class="section__group__gallery">
                 <Slideshow @items={{recommendation.gallery}} as |item|>
@@ -82,7 +78,6 @@
                 </Slideshow>
               </div>
             {{/if}}
-            --}}
 
             {{#if recommendation.resources}}
               <h4 class="section__group__sub-title">
@@ -95,8 +90,6 @@
                     <strong>{{resource.title}}</strong>
                     <Icons::External />
                   </a>
-                  <br />
-                  {{resource.short}}
                 </div>
               {{/each}}
             {{/if}}
@@ -108,12 +101,10 @@
 
               {{#each recommendation.contacts as |contact|}}
                 <div class="section__group__text section__group__text--spaced">
-                  <a href="mailto:{{contact.link}}" rel="noopener noreferrer">
+                  <a href={{contact.link}} rel="noopener noreferrer">
                     <strong>{{contact.title}}</strong>
                     <Icons::External />
                   </a>
-                  <br />
-                  {{contact.short}}
                 </div>
               {{/each}}
             {{/if}}
@@ -129,10 +120,8 @@
                     <strong>{{example.title}}</strong>
                     <Icons::External />
                   </a>
-                  {{!--
                   <br />
                   {{example.short}}
-                  --}}
                 </div>
               {{/each}}
             {{/if}}
