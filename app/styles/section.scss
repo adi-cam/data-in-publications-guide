@@ -33,12 +33,16 @@
     button {
       font-size: 14px;
       font-weight: bold;
-      color: $blue;
+      color: $dark-grey;
       border: none;
       background: none;
       padding: 0;
       margin-left: 10px;
       cursor: pointer;
+
+      &:hover {
+        color: black;
+      }
     }
   }
 
@@ -49,7 +53,7 @@
     border-radius: 8px;
 
     &--open {
-      padding-bottom: 20px;
+      padding-bottom: 30px;
     }
 
     &__title {

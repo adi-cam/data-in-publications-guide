@@ -24,11 +24,11 @@
 
     <div class="section__buttons">
       <button type="button" {{on "click" (fn this.openAll topic.recommendations)}}>
-        Open All
+        open all
       </button>
 
       <button type="button" {{on "click" (fn this.closeAll topic.recommendations)}}>
-        Close All
+        close all
       </button>
     </div>
 
@@ -57,7 +57,7 @@
             </h4>
 
             <div class="section__group__text">
-              {{{nl2br recommendation.why}}}
+              {{{auto-link (nl2br recommendation.why)}}}
             </div>
 
             {{#if recommendation.how}}
@@ -66,7 +66,7 @@
               </h4>
 
               <div class="section__group__text">
-                {{{nl2br recommendation.how}}}
+                {{{auto-link (nl2br recommendation.how)}}}
               </div>
             {{/if}}
 
