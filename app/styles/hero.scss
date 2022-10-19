@@ -25,6 +25,13 @@
     font-weight: bold;
     color: $op-blue;
     line-height: 75px;
+
+    &--black {
+      color: black;
+      font-size: 48px;
+      line-height: 60px;
+      font-weight: normal;
+    }
   }
 
   &__text {

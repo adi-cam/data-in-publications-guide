@@ -1,7 +1,7 @@
 import { modifier } from 'ember-modifier';
 
 export default modifier(
-  (element, args, { linkSelector = '', elementSelector = '', activeClass = 'active', maxOffset = 50 }) => {
+  (element, args, { linkSelector = '', elementSelector = '', activeClass = 'active', maxOffset = 150 }) => {
     // define handler
     const handler = () => {
       // get links and elements
