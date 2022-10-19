@@ -1,15 +1,22 @@
 .hero-wrapper {
   overflow: hidden;
-  padding: 0 25px;
+  padding: 25px 25px 50px;
   background-color: $background;
+
+  @include desktop() {
+    &--index {
+      background-image: url('../header.svg');
+      background-repeat: no-repeat;
+      background-position: 90% 50%;
+      background-size: contain;
+      background-origin: content-box;
+    }
+  }
 }
 
 .hero {
   max-width: 1000px;
-  margin: 25px auto 50px;
-  /*background-image: url('../hero.svg');
-  background-repeat: no-repeat;
-  background-position: center;*/
+  margin: 0 auto;
 
   &__title {
     margin: 0;
