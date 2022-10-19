@@ -18,7 +18,7 @@
   <div class="footer">
     <div>
       <p>
-        <strong>A Prototype by the Publications Office of the European Union</strong>
+        <strong>A Prototype by the<br />Publications Office of the<br />European Union</strong>
       </p>
     </div>
 
@@ -41,8 +41,34 @@
 
     <div>
       <p>
-        <button type="button" {{on "click" this.share}}>Email link</button><br />
-        <button type="button" {{on "click" this.print}}>Print page</button>
+        <button type="button" {{on "click" this.copy}}>
+          <Icons::FooterLink />
+          Copy link
+          <span style="opacity: 0">
+            &nbsp;(copied to clipboard)
+          </span>
+        </button>
+      </p>
+
+      <p>
+        <button type="button" {{on "click" this.share}}>
+          <Icons::FooterMail />
+          Email link
+        </button>
+      </p>
+
+      <p>
+        <a href="#">
+          <Icons::FooterDocument />
+          Download guide as checklist
+        </a>
+      </p>
+
+      <p>
+        <a href="#">
+          <Icons::FooterDocuments />
+          Download guide with descriptions
+        </a>
       </p>
     </div>
   </div>

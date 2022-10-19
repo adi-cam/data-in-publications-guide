@@ -37,5 +37,15 @@
     background: none;
     padding: 0;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 5px;
+    }
+
+    span {
+      color: black;
+    }
   }
 }

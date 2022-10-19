@@ -5,11 +5,16 @@ import { action } from '@ember/object';
 export default class extends Controller {
   @service data;
 
-  @action print() {
-    window.print();
+  @action copy(event) {
+    const span = event.target.querySelector('span');
+    navigator.clipboard.writeText(document.location);
+    span.style.opacity = '1';
+    setTimeout(() => {
+      span.style.opacity = '0';
+    }, 1000);
   }
 
   @action share() {
-    window.location = `mailto:xyz@abc.com?subject=EU%20Publication%20Wizard&body=Visit%20here:%20${window.location}`;
+    window.location = `mailto:xyz@abc.com?subject=Data%20in%20Publications%20Guide&body=Visit%20here:%20${window.location}`;
   }
 }
