@@ -33,7 +33,6 @@ export default class extends Service {
     for (let resource of rawResources) {
       resources[resource['id']] = {
         title: resource['title'],
-        short: resource['description'],
         link: resource['link'],
       };
     }
