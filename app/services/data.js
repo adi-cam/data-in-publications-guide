@@ -85,6 +85,18 @@ export default class extends Service {
             text: galleryTexts[index],
           };
         }),
+        related: recommendation['related'].split(',').filter((id) => !!id),
+      });
+    }
+
+    // link recommendations
+    const lookup = {};
+    for (const rec of recommendations) {
+      lookup[rec.id] = rec;
+    }
+    for (const rec of recommendations) {
+      rec.related = rec.related.map((id) => {
+        return { id: id, item: lookup[id] };
       });
     }
 

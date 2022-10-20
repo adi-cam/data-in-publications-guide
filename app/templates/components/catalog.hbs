@@ -35,7 +35,12 @@
     {{#each topic.recommendations as |recommendation|}}
       {{#let (get this.state recommendation.id) as |open|}}
         <div class="section__group {{if open 'section__group--open'}}">
-          <h3 role="button" class="section__group__title" {{on "click" (fn this.open recommendation.id (not open))}}>
+          <h3
+            role="button"
+            id="rec-{{recommendation.id}}"
+            class="section__group__title"
+            {{on "click" (fn this.open recommendation.id (not open))}}
+          >
             <span>{{recommendation.title}}</span>
 
             {{#if open}}
@@ -136,6 +141,20 @@
                   </a>
                   <br />
                   {{example.short}}
+                </div>
+              {{/each}}
+            {{/if}}
+
+            {{#if recommendation.related}}
+              <h4 class="section__group__sub-title">
+                See Also
+              </h4>
+
+              {{#each recommendation.related as |related|}}
+                <div class="section__group__text">
+                  <a href="#rec-{{related.id}}" {{on "click" (fn this.open related.id)}} {{link-inline}}>
+                    <strong>{{related.item.title}}</strong>
+                  </a>
                 </div>
               {{/each}}
             {{/if}}
