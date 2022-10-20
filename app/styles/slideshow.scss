@@ -2,13 +2,14 @@
   position: absolute;
   width: 11px;
   height: 20px;
-  display: inline-block;
+  display: inline-flex;
   border: none;
   background: none;
   cursor: pointer;
   top: 0;
   bottom: 0;
   margin: auto 0;
+  padding: 0;
 
   &--left {
     left: 5px;
