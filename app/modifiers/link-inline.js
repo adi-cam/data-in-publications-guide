@@ -4,7 +4,7 @@ export default modifier((element) => {
   // prepare handler
   const handler = (e) => {
     // get hash
-    const hash = e.target.hash;
+    const hash = e.target.closest('a').hash;
 
     // find element
     const element = document.documentElement.querySelector(hash);
