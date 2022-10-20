@@ -60,24 +60,22 @@
               {{{auto-link (nl2br recommendation.why)}}}
             </div>
 
-            {{#if recommendation.how}}
-              <h4 class="section__group__sub-title">
-                How
-              </h4>
+            <h4 class="section__group__sub-title">
+              How
+            </h4>
 
+            {{#if recommendation.how}}
               <div class="section__group__text">
                 {{{auto-link (nl2br recommendation.how)}}}
-                {{#if recommendation.howList}}
-                  <ul>
-                    {{#each recommendation.howList as |item|}}
-                      <li>{{auto-link (nl2br item)}}</li>
-                    {{/each}}
-                  </ul>
-                {{/if}}
-                {{#if recommendation.howAfter}}
-                  {{{auto-link (nl2br recommendation.howAfter)}}}
-                {{/if}}
               </div>
+            {{/if}}
+
+            {{#if recommendation.howList}}
+              <ul class="section__group__list">
+                {{#each recommendation.howList as |item|}}
+                  <li>{{auto-link (nl2br item)}}</li>
+                {{/each}}
+              </ul>
             {{/if}}
 
             {{#if recommendation.gallery.length}}
@@ -86,6 +84,12 @@
                   <img src="/eu-pubwiz/images/{{item.image}}.svg" />
                   <p>{{item.text}}</p>
                 </Slideshow>
+              </div>
+            {{/if}}
+
+            {{#if recommendation.howAfter}}
+              <div class="section__group__text">
+                {{{auto-link (nl2br recommendation.howAfter)}}}
               </div>
             {{/if}}
 

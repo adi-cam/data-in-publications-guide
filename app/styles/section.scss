@@ -95,7 +95,8 @@
       line-height: 20px;
     }
 
-    &__text {
+    &__text,
+    &__list {
       font-size: 18px;
       line-height: 26px;
 
@@ -125,9 +126,17 @@
       }
     }
 
+    &__list {
+      padding-left: 15px;
+
+      li {
+        margin: 5px 0;
+      }
+    }
+
     &__gallery {
       background-color: #eef2f9;
-      margin: 20px -20px 0;
+      margin: 20px -20px;
       padding: 20px;
       font-size: 18px;
       line-height: 26px;

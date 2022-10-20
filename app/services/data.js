@@ -62,7 +62,10 @@ export default class extends Service {
         title: recommendation['title'] || recommendation['title old'],
         why: recommendation['why'],
         how: recommendation['how'],
-        howList: recommendation['how-list'].split('|').map((s) => s.trim()),
+        howList: recommendation['how-list']
+          .split('|')
+          .map((s) => s.trim())
+          .filter((s) => !!s),
         howAfter: recommendation['how-after'],
         resources: recommendation['resources']
           .split(',')
