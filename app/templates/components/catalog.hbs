@@ -67,6 +67,16 @@
 
               <div class="section__group__text">
                 {{{auto-link (nl2br recommendation.how)}}}
+                {{#if recommendation.howList}}
+                  <ul>
+                    {{#each recommendation.howList as |item|}}
+                      <li>{{auto-link (nl2br item)}}</li>
+                    {{/each}}
+                  </ul>
+                {{/if}}
+                {{#if recommendation.howAfter}}
+                  {{{auto-link (nl2br recommendation.howAfter)}}}
+                {{/if}}
               </div>
             {{/if}}
 
