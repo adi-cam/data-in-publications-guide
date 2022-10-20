@@ -48,7 +48,6 @@ export default class extends Service {
     }
 
     // prepare recommendations
-    let id = 1;
     const recommendations = [];
     for (let recommendation of rawRecommendations) {
       // parse gallery
@@ -57,7 +56,7 @@ export default class extends Service {
 
       // add recommendation
       recommendations.push({
-        id: id++,
+        id: recommendation['id'],
         topic: recommendation['topic'],
         title: recommendation['title'] || recommendation['title old'],
         why: recommendation['why'],
