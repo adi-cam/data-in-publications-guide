@@ -40,12 +40,16 @@
     display: flex;
     align-items: center;
 
+    &:hover {
+      color: $blue-hover;
+    }
+
     svg {
       margin-right: 5px;
     }
 
     span {
-      color: black;
+      color: $black;
     }
   }
 }

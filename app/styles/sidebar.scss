@@ -41,5 +41,9 @@
     &.active {
       color: $blue;
     }
+
+    &:hover {
+      color: $blue-hover;
+    }
   }
 }

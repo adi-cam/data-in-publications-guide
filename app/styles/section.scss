@@ -33,7 +33,7 @@
     button {
       font-size: 14px;
       font-weight: bold;
-      color: $dark-grey;
+      color: $grey;
       border: none;
       background: none;
       padding: 0;
@@ -41,7 +41,7 @@
       cursor: pointer;
 
       &:hover {
-        color: black;
+        color: $black;
       }
     }
   }
@@ -91,7 +91,7 @@
     &__sub-title {
       margin: 21px 0 0;
       font-size: 14px;
-      color: $dark-grey;
+      color: $grey;
       line-height: 20px;
     }
 
@@ -117,10 +117,10 @@
         }
 
         &:hover {
-          color: $blue;
+          color: $blue-hover;
 
           svg path {
-            fill: $blue;
+            fill: $blue-hover;
           }
         }
       }
