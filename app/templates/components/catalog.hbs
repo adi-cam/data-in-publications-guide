@@ -104,11 +104,16 @@
               </h4>
 
               {{#each recommendation.resources as |resource|}}
-                <div class="section__group__text">
-                  <a href={{resource.link}} target="_blank" rel="noopener noreferrer">
-                    <strong>{{resource.title}}</strong>
+                <div class="section__group__item">
+                  <div class="section__group__item__icon">
                     <Icons::External />
-                  </a>
+                  </div>
+
+                  <div class="section__group__item__text">
+                    <a href={{resource.link}} target="_blank" rel="noopener noreferrer">
+                      {{resource.title}}
+                    </a>
+                  </div>
                 </div>
               {{/each}}
             {{/if}}
@@ -119,11 +124,16 @@
               </h4>
 
               {{#each recommendation.contacts as |contact|}}
-                <div class="section__group__text">
-                  <a href={{contact.link}} target="_blank" rel="noopener noreferrer">
-                    <strong>{{contact.title}}</strong>
+                <div class="section__group__item">
+                  <div class="section__group__item__icon">
                     <Icons::External />
-                  </a>
+                  </div>
+
+                  <div class="section__group__item__text">
+                    <a href={{contact.link}} target="_blank" rel="noopener noreferrer">
+                      {{contact.title}}
+                    </a>
+                  </div>
                 </div>
               {{/each}}
             {{/if}}
@@ -134,13 +144,18 @@
               </h4>
 
               {{#each recommendation.examples as |example|}}
-                <div class="section__group__text section__group__text--spaced">
-                  <a href={{example.link}} target="_blank" rel="noopener noreferrer">
-                    <strong>{{example.title}}</strong>
+                <div class="section__group__item section__group__item--spaced">
+                  <div class="section__group__item__icon">
                     <Icons::External />
-                  </a>
-                  <br />
-                  {{example.short}}
+                  </div>
+
+                  <div class="section__group__item__text">
+                    <a href={{example.link}} target="_blank" rel="noopener noreferrer">
+                      {{example.title}}
+                    </a>
+                    <br />
+                    {{example.short}}
+                  </div>
                 </div>
               {{/each}}
             {{/if}}
@@ -151,10 +166,16 @@
               </h4>
 
               {{#each recommendation.related as |related|}}
-                <div class="section__group__text">
-                  <a href="#rec-{{related.id}}" {{on "click" (fn this.open related.id)}} {{link-inline}}>
-                    <strong>{{related.item.title}}</strong>
-                  </a>
+                <div class="section__group__item">
+                  <div class="section__group__item__icon">
+                    <Icons::External @straight={{true}} />
+                  </div>
+
+                  <div class="section__group__item__text">
+                    <a href="#rec-{{related.id}}" {{on "click" (fn this.open related.id)}} {{link-inline}}>
+                      {{related.item.title}}
+                    </a>
+                  </div>
                 </div>
               {{/each}}
             {{/if}}

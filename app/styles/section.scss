@@ -91,7 +91,7 @@
     &__sub-title {
       margin: 21px 0 0;
       font-size: 14px;
-      color: $grey;
+      color: $black;
       line-height: 20px;
     }
 
@@ -143,6 +143,42 @@
 
       p {
         padding: 0 40px;
+      }
+    }
+
+    &__item {
+      display: flex;
+      font-size: 18px;
+      line-height: 26px;
+
+      &--spaced {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &__icon {
+        margin-right: 10px;
+
+        svg {
+          height: 12px;
+
+          path {
+            fill: $grey;
+          }
+        }
+      }
+
+      &__text {
+        a {
+          color: $grey;
+
+          &:hover {
+            color: $black;
+          }
+        }
       }
     }
   }
