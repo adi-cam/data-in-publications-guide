@@ -10,10 +10,22 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  @include mobile() {
+    margin: 40px auto;
+  }
+
   &__column {
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+    @include mobile() {
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__item {

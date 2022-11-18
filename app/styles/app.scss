@@ -30,6 +30,12 @@ $black: #1a1a1a;
   }
 }
 
+@mixin mobile() {
+  @media all and (max-width: 999px) {
+    @content;
+  }
+}
+
 @import 'about';
 @import 'footer';
 @import 'hero';

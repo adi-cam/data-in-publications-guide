@@ -16,6 +16,12 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
+  @include mobile() {
+    display: grid;
+    row-gap: 15px;
+    grid-template-columns: 1fr;
+  }
+
   p {
     margin: 10px 0;
 
