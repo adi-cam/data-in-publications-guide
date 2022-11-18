@@ -17,6 +17,8 @@
   align-items: center;
   font-size: 18px;
   justify-content: space-between;
+  font-weight: bold;
+  color: $grey;
 
   &__item {
     display: inline-block;
@@ -27,13 +29,12 @@
       margin-left: 0;
     }
 
-    &--title {
-      font-weight: bold;
-      border: none;
+    &.active {
+      color: $black;
     }
 
     &:hover {
-      color: $blue-hover;
+      color: $black;
     }
   }
 }
