@@ -19,10 +19,10 @@ export default class extends Service {
   async load() {
     // load data
     const [rawRecommendations, rawResources, rawExamples, rawTopics] = await Promise.all([
-      loadJSON('/eu-pubwiz/recommendations.json'),
-      loadJSON('/eu-pubwiz/resources.json'),
-      loadJSON('/eu-pubwiz/examples.json'),
-      loadJSON('/eu-pubwiz/topics.json'),
+      loadJSON('/data-in-publications-guide/recommendations.json'),
+      loadJSON('/data-in-publications-guide/resources.json'),
+      loadJSON('/data-in-publications-guide/examples.json'),
+      loadJSON('/data-in-publications-guide/topics.json'),
     ]);
 
     // reset state

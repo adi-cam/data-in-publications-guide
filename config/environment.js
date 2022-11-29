@@ -4,7 +4,7 @@ module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'pubwiz',
     environment,
-    rootURL: '/eu-pubwiz/',
+    rootURL: '/data-in-publications-guide/',
     locationType: 'history',
     EmberENV: {
       FEATURES: {

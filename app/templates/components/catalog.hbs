@@ -11,7 +11,7 @@
 {{#each this.data.topics as |topic|}}
   <div class="section">
     <h2 class="section__title" id={{slug topic.name}}>
-      <img src="/eu-pubwiz/icons/{{slug topic.icon}}.svg" alt={{topic.name}} />
+      <img src="/data-in-publications-guide/icons/{{slug topic.icon}}.svg" alt={{topic.name}} />
 
       <span>
         {{topic.title}}
@@ -53,7 +53,7 @@
           {{#if open}}
             {{#if recommendation.image}}
               <div class="section__group__image">
-                <img src="/eu-pubwiz/images/{{recommendation.image}}.svg" />
+                <img src="/data-in-publications-guide/images/{{recommendation.image}}.svg" />
               </div>
             {{/if}}
 
@@ -86,7 +86,7 @@
             {{#if recommendation.gallery.length}}
               <div class="section__group__gallery">
                 <Slideshow @items={{recommendation.gallery}} as |item|>
-                  <img src="/eu-pubwiz/images/{{item.image}}.svg" />
+                  <img src="/data-in-publications-guide/images/{{item.image}}.svg" />
                   <p>{{item.text}}</p>
                 </Slideshow>
               </div>
