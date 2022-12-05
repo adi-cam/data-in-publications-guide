@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Text" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250">
-  <rect x=".71" y="-.88" width="600" height="250" fill="#f3f5fa"/>
-  <text transform="translate(316.65 63.93)" font-family="Ubuntu-Regular, Ubuntu" font-size="10"><tspan x="0" y="0">This is an </tspan><tspan x="0" y="12">annotation.</tspan></text>
-  <g>
-    <line x1="199.54" y1="173.27" x2="381.24" y2="173.27" fill="none" stroke="#c0c1c3" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".57"/>
-    <line x1="199.54" y1="130.29" x2="381.24" y2="130.29" fill="none" stroke="#c0c1c3" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".57"/>
-    <line x1="199.54" y1="87.3" x2="381.24" y2="87.3" fill="none" stroke="#c0c1c3" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".57"/>
-    <line x1="199.54" y1="44.32" x2="381.24" y2="44.32" fill="none" stroke="#c0c1c3" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".57"/>
-    <line x1="199.54" y1="216.26" x2="381.24" y2="216.26" fill="none" stroke="#c0c1c3" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".85"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 471.19 250">
+  <g id="Hintergrund">
+    <rect x="-.13" y="-.88" width="471.19" height="250" fill="#f3f5fa"/>
   </g>
-  <rect x="218.77" y="44.32" width="16.3" height="171.94" fill="#8099cc"/>
-  <rect x="249.46" y="61.03" width="16.3" height="155.27" fill="#8099cc"/>
-  <rect x="280.15" y="86.95" width="16.3" height="129.42" fill="#039"/>
-  <path d="M288.2,85.23v-18.23c0-3.98,3.26-7.24,7.24-7.24h18.17" fill="none" stroke="#c0c1c3" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".57"/>
+  <g id="Text">
+    <line x1="357.45" y1="216.26" x2="119.31" y2="216.26" fill="none" stroke="#c0c1c3" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".85"/>
+    <line x1="357.45" y1="173.73" x2="119.31" y2="173.73" fill="none" stroke="#c0c1c3" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".57"/>
+    <line x1="357.45" y1="131.21" x2="119.31" y2="131.21" fill="none" stroke="#c0c1c3" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".57"/>
+    <line x1="357.45" y1="88.69" x2="119.31" y2="88.69" fill="none" stroke="#c0c1c3" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".57"/>
+    <line x1="357.45" y1="46.16" x2="119.31" y2="46.16" fill="none" stroke="#c0c1c3" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".57"/>
+    <text transform="translate(273.64 232.96)" fill="#58585a" font-family="Ubuntu-Regular, Ubuntu" font-size="10"><tspan x="0" y="0">2021</tspan></text>
+    <text transform="translate(227.1 232.96)" fill="#58585a" font-family="Ubuntu-Regular, Ubuntu" font-size="10"><tspan x="0" y="0">2020</tspan></text>
+    <text transform="translate(183.45 232.96)" fill="#58585a" font-family="Ubuntu-Regular, Ubuntu" font-size="10"><tspan x="0" y="0">2019</tspan></text>
+    <text transform="translate(135.84 232.96)" fill="#58585a" font-family="Ubuntu-Regular, Ubuntu" font-size="10"><tspan x="0" y="0">2018</tspan></text>
+    <text transform="translate(317.59 232.96)" fill="#58585a" font-family="Ubuntu-Regular, Ubuntu" font-size="10"><tspan x="0" y="0">2022</tspan></text>
+    <text transform="translate(102.41 92.03)" fill="#58585a" font-family="Ubuntu-Regular, Ubuntu" font-size="10"><tspan x="0" y="0">60</tspan></text>
+    <text transform="translate(102.41 49.64)" fill="#58585a" font-family="Ubuntu-Regular, Ubuntu" font-size="10"><tspan x="0" y="0">80</tspan></text>
+    <text transform="translate(102.41 133.2)" fill="#58585a" font-family="Ubuntu-Regular, Ubuntu" font-size="10"><tspan x="0" y="0">40</tspan></text>
+    <text transform="translate(102.41 176.3)" fill="#58585a" font-family="Ubuntu-Regular, Ubuntu" font-size="10"><tspan x="0" y="0">20</tspan></text>
+    <text transform="translate(108.05 219.65)" fill="#58585a" font-family="Ubuntu-Regular, Ubuntu" font-size="10"><tspan x="0" y="0">0</tspan></text>
+    <text transform="translate(357.32 63.93)" font-family="Ubuntu-Regular, Ubuntu" font-size="10"><tspan x="0" y="0">This is an </tspan><tspan x="0" y="12">annotation.</tspan></text>
+    <rect x="181.31" y="44.32" width="22.55" height="171.94" fill="#8099cc"/>
+    <rect x="226.77" y="106.65" width="22.55" height="109.6" fill="#8099cc"/>
+    <rect x="135.84" y="33.99" width="22.55" height="182.26" fill="#8099cc"/>
+    <rect x="272.23" y="61.48" width="22.55" height="155.27" fill="#8099cc"/>
+    <rect x="317.69" y="86.95" width="22.55" height="129.42" fill="#039"/>
+    <path d="M328.87,85.23v-18.23c0-3.98,3.26-7.24,7.24-7.24h18.17" fill="none" stroke="#c0c1c3" stroke-linecap="round" stroke-miterlimit="10" stroke-width=".57"/>
+  </g>
 </svg>

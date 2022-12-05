@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 250">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 250">
+  <defs>
+    <clipPath id="clippath">
+      <polygon points="364.98 68.59 375.8 53.23 382.44 59.52 395.7 42.06 395.7 68.59 364.98 68.59" fill="none"/>
+    </clipPath>
+  </defs>
   <g id="Hintergrund">
-    <rect x="-.16" y="0" width="600" height="250" fill="#f2fcf3"/>
+    <rect x="-.16" width="600" height="250" fill="#f2fcf3"/>
   </g>
   <g id="Graphic">
     <g>
@@ -19,10 +24,6 @@
       <line x1="329.79" y1="179.19" x2="428.47" y2="179.19" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.13"/>
       <line x1="329.79" y1="188.69" x2="413.22" y2="188.69" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.13"/>
       <line x1="329.79" y1="198.19" x2="420.76" y2="198.19" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.13"/>
-      <g>
-        <rect x="365.13" y="37.86" width="30.73" height="30.73" fill="none"/>
-        <polygon points="365.13 68.59 375.95 53.23 382.59 59.52 395.85 42.06 395.85 68.59 365.13 68.59" fill="#fff"/>
-      </g>
       <rect x="153.05" y="29.6" width="143.38" height="202.88" fill="#bfeec2"/>
       <rect x="147.07" y="23.86" width="143.38" height="202.88" fill="#80d980"/>
       <line x1="168.2" y1="81.67" x2="265.45" y2="81.67" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.13"/>
@@ -39,9 +40,16 @@
       <rect x="203.54" y="37.86" width="30.73" height="30.73" fill="none"/>
       <g>
         <rect x="201.41" y="128.78" width="30.73" height="30.73" fill="none"/>
-        <rect x="203.46" y="151.22" width="9.69" height="7.05" transform="translate(53.56 363.05) rotate(-90)" fill="#fff"/>
+        <rect x="203.46" y="151.22" width="9.69" height="7.05" transform="translate(53.56 363.05) rotate(-90)" fill="#fff" opacity=".6"/>
         <rect x="206.92" y="146.01" width="20.12" height="7.05" transform="translate(67.45 366.51) rotate(-90)" fill="#fff"/>
-        <rect x="211.46" y="141.88" width="28.38" height="7.05" transform="translate(80.25 371.05) rotate(-90)" fill="#fff"/>
+        <rect x="211.46" y="141.88" width="28.38" height="7.05" transform="translate(80.25 371.05) rotate(-90)" fill="#fff" opacity=".6"/>
+      </g>
+      <g>
+        <rect x="364.98" y="37.86" width="30.73" height="30.73" fill="none"/>
+        <polygon points="364.98 68.59 375.8 53.23 382.44 59.52 395.7 42.06 395.7 68.59 364.98 68.59" fill="#fff" opacity=".6"/>
+        <g clip-path="url(#clippath)">
+          <polyline points="364.98 68.59 375.8 53.23 382.44 59.52 395.7 42.06" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+        </g>
       </g>
     </g>
   </g>
