@@ -14,6 +14,9 @@ module.exports = function (defaults) {
     prember: {
       urls: ['/', '/about'],
     },
+    fingerprint: {
+      exclude: ['images/'],
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
