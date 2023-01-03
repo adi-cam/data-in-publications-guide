@@ -189,10 +189,18 @@
       &__text {
         a {
           color: $grey;
+        }
+      }
 
-          &:hover {
-            color: $black;
-          }
+      $self: &;
+
+      &:hover {
+        #{$self}__icon svg path {
+          fill: $black;
+        }
+
+        #{$self}__text a {
+          color: $black;
         }
       }
     }
