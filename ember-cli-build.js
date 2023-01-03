@@ -15,7 +15,7 @@ module.exports = function (defaults) {
       urls: ['/', '/about'],
     },
     fingerprint: {
-      exclude: ['images/'],
+      exclude: ['images/', 'icon.png', 'social.jpg'],
     },
   });
 
