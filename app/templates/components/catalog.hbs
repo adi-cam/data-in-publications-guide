@@ -22,7 +22,7 @@
       {{topic.description}}
     </p>
 
-    <div class="section__buttons">
+    <div class="section__buttons no-print">
       <button type="button" {{on "click" (fn this.openAll topic.recommendations)}}>
         open all
       </button>
@@ -44,9 +44,9 @@
             <span>{{recommendation.title}}</span>
 
             {{#if open}}
-              <Icons::ChevronUp />
+              <Icons::ChevronUp class="no-print" />
             {{else}}
-              <Icons::ChevronDown />
+              <Icons::ChevronDown class="no-print" />
             {{/if}}
           </h3>
 
