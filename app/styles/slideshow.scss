@@ -13,6 +13,10 @@
   box-sizing: content-box;
   align-items: center;
 
+  &:focus {
+    background: none;
+  }
+
   &--left {
     left: 0;
     justify-content: left;
