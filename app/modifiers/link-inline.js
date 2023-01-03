@@ -16,7 +16,7 @@ export default modifier((element) => {
     e.preventDefault();
 
     // get offset
-    const offset = element.getBoundingClientRect().top + document.documentElement.scrollTop;
+    const offset = element.getBoundingClientRect().top + document.documentElement.scrollTop - 75;
 
     // scroll smooth
     document.documentElement.scrollTo({
