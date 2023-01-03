@@ -1,7 +1,7 @@
 .glide__arrow {
   position: absolute;
-  width: 11px;
-  height: 20px;
+  width: 50%;
+  height: 100%;
   display: inline-flex;
   border: none;
   background: none;
@@ -9,14 +9,18 @@
   top: 0;
   bottom: 0;
   margin: auto 0;
-  padding: 0;
+  padding: 5px;
+  box-sizing: content-box;
+  align-items: center;
 
   &--left {
-    left: 5px;
+    left: 0;
+    justify-content: left;
   }
 
   &--right {
-    right: 5px;
+    right: 0;
+    justify-content: right;
   }
 }
 
